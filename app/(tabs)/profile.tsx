@@ -21,7 +21,7 @@ type Post = {
 
 const Profile = () => {
 
-  const { logout } = useAuth();
+  const { user,  logout } = useAuth();
   const { data, loading, refetch } = useApi<{ posts: Post[] }>(getUserPosts); 
   useEffect(()=> {
     refetch();
@@ -87,14 +87,14 @@ const Profile = () => {
 
               <View className="w-16 h-16 border border-secondary rounded-lg flex justify-center items-center">
                 <Image
-                  source={{ uri: data?.posts[0].avatar }}
+                  source={{ uri: data?.posts[0]?.avatar || "https://www.gravatar.com/avatar/?d=mp"  }}
                   className="w-[90%] h-[90%] rounded-lg"
                   resizeMode="cover"
                 />
               </View>
 
               <InfoBox 
-                title={data?.posts[0].username || "User"}
+                title={user.username}
                 containerStyles="mt-5"
                 titleStyles="text-lg"
               />

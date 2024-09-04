@@ -22,12 +22,13 @@ type Post = {
 const Home = () => {
   const { user, userLoading  } = useAuth();
   const { data, loading , refetch } = useApi<{ posts: Post[] }>(getAllPosts);
-  const { data: latestPosts, loading : loadingLatest } = useApi<{ posts: Post[] }>(getLatestPosts);
+  const { data: latestPosts, loading : loadingLatest, refetch : latestRefetch } = useApi<{ posts: Post[] }>(getLatestPosts);
   const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh =async ()=> {
     setRefreshing(true);
     await refetch(); 
+    await latestRefetch();
     setRefreshing(false); 
   }
 
@@ -39,7 +40,7 @@ const Home = () => {
         </View>
       ) : (
         <FlatList
-          data={data?.posts ?? []}
+          data={data == null ? [] : data.posts}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <ImageCard
@@ -84,7 +85,7 @@ const Home = () => {
                 {loadingLatest ? (
                   <ActivityIndicator size="small" color="#fff" />
                 ) : (
-                  <Trending posts={latestPosts?.posts ?? []} />
+                  <Trending posts={latestPosts == null ? [] : latestPosts.posts} />
                 )}
               </View>
             </View>

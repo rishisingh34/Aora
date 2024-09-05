@@ -27,7 +27,7 @@ const SignIn = () => {
       const response = await axios.post(`${baseUrl}/auth/login`, { ...form}); 
       if( response.status == 200) {
         const { token } = response.data; 
-        login(token); 
+        await login(token); 
         ToastAndroid.show('Logged in successfully', ToastAndroid.SHORT);
       }
       router.replace('/home'); 

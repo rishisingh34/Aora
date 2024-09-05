@@ -1,5 +1,5 @@
 import { View, Text , FlatList, Image, RefreshControl , ActivityIndicator} from 'react-native'
-import {useState} from 'react'
+import {useState, useEffect } from 'react'
 import {SafeAreaView} from 'react-native-safe-area-context'
 import { images } from '@/constants'  
 import SearchInput from '@/components/SearchInput'
@@ -31,6 +31,10 @@ const Home = () => {
     await latestRefetch();
     setRefreshing(false); 
   }
+  useEffect(()=> {
+    refetch();
+    latestRefetch();
+  }, [])
 
   return (
     <SafeAreaView className='bg-primary h-full'>

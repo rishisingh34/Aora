@@ -1,8 +1,112 @@
-# Welcome to your Expo app 👋
+# Welcome to Pixx 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<p align="center">
+  <img src="assets\pix_ss\getstarted.jpg" alt="Sign Up" width="300" style="border-radius: 20px;"/>
+</p>
 
-## Get started
+# Let's Dive into Pix 
+
+Dive into the world of boundless creativity with Pixx, the ultimate platform for AI-generated art enthusiasts.
+
+Pixx is where imagination meets technology—where you can discover, share, and celebrate stunning AI-generated images from creators around the globe.
+
+Pixx is your gateway to a vibrant community of digital artists. Join us and redefine the art of tomorrow, today.
+
+---
+# Sign Up
+
+<p align="center">
+  <img src="assets\pix_ss\register.jpg" alt="Sign Up" width="300" style="border-radius: 20px;"/>
+</p>
+
+Create an account by entering a unique username that will be displayed when you share images with others.
+
+Ensure that your email is valid, as it will be used for verification, and your password must be at least 6 characters long.
+
+After signing up, an email verification link will be sent to your email address. Click on the link to activate your account.
+
+
+---
+
+# Login
+
+<p align="center">
+  <img src="assets\pix_ss\login.jpg" alt="Login" width="300" style="border-radius: 20px;"/>
+</p>
+
+Complete the login form with your verified email and password. The system uses JWT-based authentication through a custom Express server.
+
+Your login token is stored securely using async storage, allowing you to stay logged in even after closing the app.
+
+If you have forgotten your password, click on the "Forgot Password" link and follow the steps to reset it.
+
+
+---
+
+# Home
+
+<p align="center">
+  <img src="assets\pix_ss\home.jpg" alt="Home" width="300" style="border-radius: 20px;"/>
+</p>
+
+Access the latest images posted by users on the platform, displayed in chronological order.
+
+Browse through different image sections, organized by various topics and categories.
+
+Use the search bar to find images related to specific topics or keywords of interest.
+
+
+
+---
+
+# Bookmarks
+
+<p align="center">
+  <img src="assets\pix_ss\bookmarks.jpg" alt="Bookmarks" width="300" style="border-radius: 20px;"/>
+</p>
+
+View all the images you have bookmarked for later viewing in one place.
+
+Easily manage your bookmarks by removing any images you no longer wish to keep.
+
+Keep track of your favorite images without clutter, and revisit them anytime.
+
+
+---
+
+# Profile
+
+<p align="center">
+  <img src="assets\pix_ss\profile.jpg" alt="Profile" width="300" style="border-radius: 20px;"/>
+</p>
+
+Log out of your account securely from the profile section.
+
+View a detailed list of all the posts you have shared on the platform.
+
+See a quick summary of your total post count, giving you an overview of your contributions.
+
+
+
+---
+
+# Create
+
+<p align="center">
+  <img src="assets\pix_ss\create.jpg" alt="Create" width="300" style="border-radius: 20px;"/>
+</p>
+
+Create a new post by providing a title and uploading an image to share with others.
+
+Select an image file directly from your mobile device’s gallery to upload.
+
+Once uploaded, your post will be available for others to view and engage with on the platform.
+
+
+
+
+
+## Setup on your Local Machine
 
 1. Install dependencies
 
@@ -15,36 +119,3 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    ```bash
     npx expo start
    ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
